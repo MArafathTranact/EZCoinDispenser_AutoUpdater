@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace EZCashCoinAutoUpdate
@@ -685,13 +686,28 @@ namespace EZCashCoinAutoUpdate
 
                     if (File.Exists(sourceFilePath))
                     {
+                        var existingConfigValue = ReadLocalConfigValue(sourceFilePath);
 
-                        string destinationFilePath = Path.Combine(configuration.ServiceInstallPath, Path.GetFileName(sourceFilePath));
+                        string serviceFolder = AppDomain.CurrentDomain.BaseDirectory;
 
-                        File.Copy(sourceFilePath, destinationFilePath, true);
-                        LogEvents($"Original EZCash config file copied to '{destinationFilePath}' for service startup.");
+                        var copyResult = MoveExistingConfigValue(existingConfigValue, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CoinDispenserService.exe.config"));
+
+                        //string destinationFilePath = Path.Combine(configuration.ServiceInstallPath, Path.GetFileName(sourceFilePath));
+
+                        if (copyResult)
+                        {
+                            //File.Copy(sourceFilePath, destinationFilePath, true);
+                            LogEvents($"EZCoin service config file copied for service startup.");
+                            return true;
+                        }
+                        else
+                        {
+                            LogEvents($"EZCoin service config file copy failed for service startup.");
+                            return true;
+                        }
                     }
-                    return true;
+                    else
+                        return false;
                 }
                 else
                     return false;
@@ -703,6 +719,82 @@ namespace EZCashCoinAutoUpdate
             }
         }
 
+        private Dictionary<string, string> ReadLocalConfigValue(string configFilePath)
+        {
+            Dictionary<string, string> configValue = [];
+
+            try
+            {
+                XDocument doc = XDocument.Load(configFilePath);
+                XElement appSettings = doc.Root.Element("appSettings");
+                if (appSettings == null)
+                {
+                    appSettings = new XElement("appSettings");
+                    doc.Root.Add(appSettings);
+                }
+
+                XElement Portsetting = appSettings.Elements("add").FirstOrDefault(e => e.Attribute("key")?.Value == "Port");
+                if (Portsetting != null)
+                    configValue.Add("Port", Portsetting.Attribute("value")?.Value);
+
+
+            }
+            catch (Exception ex)
+            {
+                LogExceptions(" ReadLocalConfigValue() ", ex);
+                return default;
+            }
+
+            return configValue;
+        }
+
+        private bool MoveExistingConfigValue(Dictionary<string, string> existingConfig, string currentConfigFilePath)
+        {
+
+            try
+            {
+                if (!string.IsNullOrEmpty(currentConfigFilePath) && File.Exists(currentConfigFilePath))
+                {
+                    // Work in memory
+                    XDocument doc = XDocument.Load(currentConfigFilePath);
+                    XElement appSettings = doc.Root.Element("appSettings");
+                    if (appSettings == null)
+                    {
+                        appSettings = new XElement("appSettings");
+                        doc.Root.Add(appSettings);
+                    }
+
+                    if (existingConfig != null)
+                    {
+                        foreach (var item in existingConfig)
+                        {
+                            XElement setting = appSettings.Elements("add").FirstOrDefault(e => e.Attribute("key")?.Value == item.Key);
+
+                            if (setting != null)
+                            {
+                                setting.SetAttributeValue("value", item.Value);
+                            }
+
+                        }
+                        doc.Save(currentConfigFilePath);
+
+                    }
+                    return true;
+                }
+                else
+                {
+                    LogEvents($"EZCash config file not found in {currentConfigFilePath}.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogExceptions(" MoveExistingConfigValue() ", ex);
+                return false;
+            }
+
+
+        }
         private void CopyAutoUpdateConfigFile()
         {
             try

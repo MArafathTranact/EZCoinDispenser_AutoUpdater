@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EZCashCoinAutoUpdate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e82577b17fe484bd96225d17c59e97778eb4fbdf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88072d91f2ed9ae411317b777da14b62f0e68975")]
 [assembly: System.Reflection.AssemblyProductAttribute("EZCashCoinAutoUpdate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EZCashCoinAutoUpdate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

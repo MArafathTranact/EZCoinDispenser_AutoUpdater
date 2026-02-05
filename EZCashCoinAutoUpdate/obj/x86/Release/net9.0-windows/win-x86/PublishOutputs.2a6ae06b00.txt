@@ -1,0 +1,2 @@
+D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Release\net9.0-windows\publish\win-x86\EZCashCoinAutoUpdate.pdb
+D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Release\net9.0-windows\publish\win-x86\EZCashCoinAutoUpdate.exe

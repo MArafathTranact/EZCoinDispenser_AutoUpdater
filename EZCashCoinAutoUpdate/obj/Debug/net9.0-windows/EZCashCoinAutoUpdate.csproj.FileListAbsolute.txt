@@ -1,12 +1,9 @@
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\EZCashCoinAutoUpdate.exe
-D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\AutoUpdateNLog.config
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\EZCashCoinAutoUpdate.deps.json
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\EZCashCoinAutoUpdate.runtimeconfig.json
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\EZCashCoinAutoUpdate.dll
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\EZCashCoinAutoUpdate.pdb
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\BouncyCastle.Cryptography.dll
-D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\NLog.dll
-D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\NLog.Loki.dll
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\System.Diagnostics.EventLog.dll
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\System.Reactive.dll
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\System.ServiceProcess.ServiceController.dll
@@ -28,3 +25,5 @@ D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinD
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\obj\Debug\net9.0-windows\EZCashCoinAutoUpdate.pdb
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\obj\Debug\net9.0-windows\EZCashCoinAutoUpdate.genruntimeconfig.cache
 D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\obj\Debug\net9.0-windows\ref\EZCashCoinAutoUpdate.dll
+D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\Serilog.dll
+D:\Arafath_PC_9222025\Arafath - 5202024\Arafath\Arafath\Projects\Tranact\EZCoinDispenser_AutoUpdater\EZCashCoinAutoUpdate\bin\Debug\net9.0-windows\Serilog.Sinks.File.dll
